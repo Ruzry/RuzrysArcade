@@ -1,0 +1,17 @@
+{
+    "images": {
+        "sky" : "../public/images/sky.png"
+    },
+
+    "audio": {
+
+        "music" : {},
+
+        "sfx" : {}
+    },
+
+    "models": {
+
+
+    }
+}
