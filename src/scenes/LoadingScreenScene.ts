@@ -1,4 +1,5 @@
 import Phaser from 'phaser'
+import LoadingScreen from './LoadingScreen';
 
 const Orange = 0xFFAD00
 const LightPurple = 0x832AEE
@@ -7,17 +8,16 @@ export default class LoadingScreenScene extends Phaser.Scene
 {
     private centreX: number = 0;
     private centreY: number = 0;
+    //private assetPath: URL;
 
-    constructor()
+    constructor(private JSONPath: string)
     {
         super('loading-screen-Scene')
     }
 
     preload()
     {
-        this.load.setBaseURL('http://labs.phaser.io')
-
-
+        this.load.json('assets',this.JSONPath)
     }
 
     create(){
